@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+body{
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+border-radius:35px;
+padding:25px;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.title{
+text-align:center;
+font-size:32px;
+font-weight:700;
+color:white;
+margin-bottom:25px;
+}
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:space-between;
+text-decoration:none;
+padding:18px 20px;
+margin-bottom:16px;
+border-radius:22px;
+font-size:18px;
+font-weight:600;
+color:white;
+backdrop-filter:blur(15px);
+transition:0.25s;
+box-shadow:
+inset 0 1px 1px rgba(255,255,255,0.2),
+0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+.phone{
+background:linear-gradient(135deg,#34c759,#30b350);
+}
+
+.telegram{
+background:linear-gradient(135deg,#229ED9,#1677b8);
+}
+
+.channel{
+background:linear-gradient(135deg,#0ea5e9,#2563eb);
+}
+
+.group{
+background:linear-gradient(135deg,#8b5cf6,#6d28d9);
+}
+
+.viber{
+background:linear-gradient(135deg,#7c4dff,#5b21b6);
+}
+
+.kpay{
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+.wave{
+background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.icon{
+font-size:22px;
+}
+
+.arrow{
+font-size:20px;
+opacity:0.8;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.popup-box{
+background:white;
+color:black;
+padding:25px;
+border-radius:25px;
+width:100%;
+max-width:320px;
+text-align:center;
+}
+
+.popup-box h2{
+margin-bottom:15px;
+}
+
+.close-btn{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+border-radius:15px;
+background:#2563eb;
+color:white;
+font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="title"> Contact Me</div>
+
+<a class="btn phone" href="tel:09683492162">
+<span class="icon">📞 Phone</span>
+<span class="arrow">›</span>
+</a>
+
+<a class="btn telegram" href="https://t.me/KONAING2864">
+<span class="icon">✈ Telegram</span>
+<span class="arrow">›</span>
+</a>
+
+<a class="btn channel" href="https://t.me/KoNaingDigitalStore">
+<span class="icon">📢 Channel</span>
+<span class="arrow">›</span>
+</a>
+
+<a class="btn group" href="https://t.me/KoNaingResell">
+<span class="icon">🛒 Shopping GP</span>
+<span class="arrow">›</span>
+</a>
+
+<a class="btn viber" href="tel:09683492162">
+<span class="icon">💜 Viber</span>
+<span class="arrow">›</span>
+</a>
+
+<a class="btn kpay" href="#" onclick="openPopup('KPay Name : HARI RAM','Phone : 09683492162')">
+<span class="icon">💳 KPay - HARI RAM</span>
+<span class="arrow">›</span>
+</a>
+
+<a class="btn wave" href="#" onclick="openPopup('Wave Name : Sander Win','Phone : 09683492162')">
+<span class="icon">🌊 Wave - Sander Win</span>
+<span class="arrow">›</span>
+</a>
+
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-box">
+<h2 id="popupTitle"></h2>
+<p id="popupPhone"></p>
+
+<button class="close-btn" onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<script>
+function openPopup(title,phone){
+document.getElementById('popup').style.display='flex';
+document.getElementById('popupTitle').innerText=title;
+document.getElementById('popupPhone').innerText=phone;
+}
+
+function closePopup(){
+document.getElementById('popup').style.display='none';
+}
+</script>
+
+</body>
+</html>
